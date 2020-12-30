@@ -1,5 +1,21 @@
+input.onButtonPressed(Button.A, function () {
+    input.calibrateCompass()
+    basic.showLeds(`
+        # . # # #
+        # . . . #
+        # . # . #
+        # . . . #
+        # # # # #
+        `)
+})
 let richtung = 0
-input.calibrateCompass()
+basic.showLeds(`
+    # # # # #
+    # . . . #
+    # . # . #
+    # . . . #
+    # # # # #
+    `)
 basic.forever(function () {
     richtung = input.compassHeading()
     if (richtung < 190 && richtung > 170) {
